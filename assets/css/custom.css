@@ -176,14 +176,6 @@ strong {
   align-self: center;
 }
 
-/* .navbar-brand {
-  color: #fff;
-}
-
-.navbar-brand:hover {
-  color: #000;
-} */
-
 a,
 a:visited {
   color: var(--primary-text-color);
@@ -213,32 +205,6 @@ table a:hover {
   -webkit-text-stroke: 0.5vw var(--primary-color);
   font-size: 4vw;
   color: var(--primary-color);
-}
-
-header {}
-
-#hero {
-  font-family: var(--primary-font);
-  text-align: center;
-  position: relative;
-  z-index: 9;
-}
-
-.promo {
-  display: flex;
-  align-items: center;
-  gap: .6rem;
-}
-
-.promo input {
-  width: min-content !important;
-}
-
-#archived-menu {
-  width: 100%;
-  position: fixed;
-  left: 0;
-  z-index: 999;
 }
 
 .modal {
@@ -333,14 +299,6 @@ b {
   color: var(--primary-color);
 }
 
-/* .download {
-  object-fit: contain;
-  position: relative;
-  width: 2rem;
-  padding: 1rem;
-  display: block;
-} */
-
 .uniform_box b {
   color: #fff;
 }
@@ -369,12 +327,6 @@ b {
   width: -webkit-fill-available;
   text-align: left;
   margin: 0;
-}
-
-#archived-post-list {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
 }
 
 input,
@@ -470,52 +422,6 @@ tr.unpublished::before {
 .resume-placeholder {
   margin-left: 2rem;
 }
-
-/*
-.resume-placeholder:hover  {
-  border-bottom: 1px solid transparent !important;
-}
-
-.resume-placeholder:hover::after  {
-  content: "";
-  position: absolute;
-  width: 65px;
-  height: 1px;
-  background-color: var(--primary-color);
-  display: block;
-  margin: 0 1.7rem;
-}
-
-.resume-text {
-  align-self: center;
-  justify-self: center;
-} */
-
-/* .resume, .resume-inner-text {
-  height: 100%;
-}
-
-.resume-inner-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  font-weight: 900;
-  font-size: 2em;
-} */
-
-/* .resume-inner-text p:first-of-type {
-  width: min-content;
-  text-align: center;
-}
-
-.resume-inner-text p:nth-last-of-type(1) {
-  font-size: 2em;
-}
-
-.resume span {
-  display: contents !important;
-} */
 
 img {
   height: 100%;
@@ -686,7 +592,9 @@ section#post-details {
 }
 
 .promoted {
-  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color) !important;
+  border-radius: 5px;
+  background: var(--scroll-track);
 }
 
 .experienceBlock {
@@ -758,20 +666,20 @@ footer > * {
   position: absolute;
   z-index: 1;
   top: -2rem;
-  left: 50%;
+  left: 100%;
   transform: translateX(-50%);
 }
 
-#tooltip::after {
+#tooltip::before {
   content: "";
   width: 0;
   height: 0;
-  border-left: .6rem solid transparent;
-  border-top: .6rem solid #555;
+  border-right: 0.6rem solid transparent;
+  border-top: 0.6rem solid #555;
   display: block;
   position: absolute;
-  margin-top: 5px;
-  right: 0;
+  margin-top: 25px;
+  left: 5px;
 }
 
 
