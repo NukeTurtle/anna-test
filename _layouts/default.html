@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <title>Anna - {{ page.title }}</title>
-  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '{{ site.baseurl }}/assets/css/main.css' | relative_url }}">
 </head>
 <body id="home">
     <nav class="navbar">
         <ul class="navbar-nav me-auto">
           <li class="nav-item">
-            <img class="logo" src="./images/favicon.jpg" alt="" srcset="">
+            <img class="logo" src="{{ site.baseurl }}/images/favicon.jpg" alt="" srcset="">
             <a aria-current="page" href="/">Anna Kozh</a>
           </li>
           <li class="nav-item">
