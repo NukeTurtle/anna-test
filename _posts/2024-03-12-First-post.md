@@ -2,7 +2,8 @@
 layout: post
 title: "The Art of UX/UI Design: Creating Seamless Digital Experiences"
 date: 2024-03-10
-tags: Case study
+tags: "Case study"
+image: "UX-Conversion-Rates-Image.webp"
 promoted: 0
 posted: 1
 deleted: 0
