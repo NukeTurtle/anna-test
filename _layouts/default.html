@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Anna - {{ page.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+</head>
+<body id="home">
+    <nav class="navbar">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <img class="logo" src="./images/favicon.jpg" alt="" srcset="">
+            <a aria-current="page" href="/">Anna Kozh</a>
+          </li>
+          <li class="nav-item">
+            <a aria-current="page" href="{{ site.baseurl }}/">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a aria-current="page" href="{{ site.baseurl }}/blog.html">Blog</a>
+          </li>
+          <li class="nav-item icon download" style="background: url(./images/cloud-arrow-down-solid.svg) no-repeat;">
+            <a class="resume-placeholder " href="">
+                R&#233sum&#233</a>
+          </li>
+        </ul>
+    </nav>
+
+  <h1><b>{{ post.promoted }}</b> - {{ page.title }}</h1>
+  <p>{{ page.date | date: "%B %d, %Y" }}</p>
+  <div>{{ content }}</div>
+</body>
+</html>

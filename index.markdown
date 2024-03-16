@@ -1,0 +1,30 @@
+---
+layout: default
+title: Anna Kozh
+---
+
+<h1>All Posts</h1>
+
+<div id="postList">
+{% for post in site.posts %}
+    <div class="post ${promotedClass}">
+        <a href="{{ post.url }}">
+            <img class="post-image" src="/uploads/${post.postImage}">
+            <h3>{{ post.title }}</h3>
+            <p><strong>Description:</strong> ${post.postDescription}</p>
+            <p><strong>Content:</strong> ${post.postContent}</p>
+            <p><strong>Promoted:</strong> ${post.postPromoted}</p>
+            <p><strong>Published on</strong> ${formattedDate}</p>
+        </a>
+    </div>
+    {% endfor %}
+    <!-- <ul>
+        {% for post in site.posts %}
+            {% if post.promoted == 1 %}
+                <li>
+                    <a href="{{ post.url }}">{{ post.promoted }} - {{ post.title }}</a>
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul> -->
+</div>
