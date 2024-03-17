@@ -1,34 +1,21 @@
 ---
 layout: default
 title: Blog
+under_construction: "{{ site.is_under_construction }}"
 ---
-
-<!-- <div id="postList">
-    {% for post in site.posts %}
-    <div class="post{% if post.promoted == 1 %} promoted{% endif %}">
-        <a href="{{post.url}}">
-                <h3>{{post.title}}</h3>
-                <p><strong>Description:</strong> {{post.description}}</p>
-                <p><strong>Content:</strong> {{post.content}}</p>
-                <p><strong>Promoted:</strong> ${post.promoted}</p>
-                <p><strong>Published on</strong> ${formattedDate}</p>
-            </a>
-        </div>
-    {% endfor %}
-</div> -->
 
 <section id="post-container" class="block">
     {% for post in site.posts %}
     <a href="{{post.url}}" style="all: unset;">
         <div class="post{% if post.promoted == 1 %} promoted{% endif %}" data-word-count="{{ post.content | number_of_words  }}">
         <div class="post-content">
-            <h2>{{ post.title }}</h2>
-            <p>{{ post.content }}</p>
+            <h2>{{post.title}}</h2>
+            <p>{{post.content}}</p>
             <div class="post-stats">
             {% assign formattedDate = post.date | date: "%d %b %Y" | upcase %}
-            <span>{{ formattedDate }}</span>
+            <span>{{formattedDate}}</span>
             <span class="readingTime"></span>
-            <span class="{% if post.tags %}post_type{% endif %}">{{ post.tags }}</span>
+            <span class="{% if post.tags %}post_type{% endif %}">{{post.tag}}</span>
             </div>
         </div>
         </div>
@@ -40,17 +27,8 @@ title: Blog
     const postElements = document.querySelectorAll('.post');
 
     postElements.forEach(function(postElement, index) {
-      // Get word count from data attribute
       const wordCount = postElement.getAttribute('data-word-count');
-    //   const wordCount = calculateWordCount('{{post.content | jsonify | strip_html}} ');
-      console.log(wordCount)
-      
-      // Calculate reading time
       const readingTime = calculateReadingTime(wordCount);
-      console.log(readingTime)
-
-      // Output reading time in the console (for testing)
-      console.log('Reading time for post #' + (index + 1) + ': ' + readingTime);
 
       // Find the readingTime span element within the current post
       const readingTimeElement = postElement.querySelector('.readingTime');

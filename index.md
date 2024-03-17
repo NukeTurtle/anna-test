@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Portfolio
+under_construction: "{{ site.is_under_construction }}"
 ---
 
 <section id="pastExperiences">
@@ -11,7 +12,7 @@ title: Portfolio
             In 2022 I joined Simpology .....Lorem ipsum dolor sit amet consectetur. Eget consequat luctus a dui eu morbi eget dui arcu. Id ac justo odio felis eu. Consectetur sit ornare nisl cras. Lobortis massa nibh eget a.
         </p>
         <ul class="xpLink">
-            <li><a href="/2024-03-12-First-post">Case study “Digital income”</a></li>
+            <li><a href="{{ post.url }}">Case study “Digital income”</a></li>
             <li><a href="/posts/5">Case study “Digital income”</a></li>
             <li><a href="/posts/5">Case study “Digital income”</a></li>
         </ul>

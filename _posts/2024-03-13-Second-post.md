@@ -1,8 +1,8 @@
 ---
-layout: post
+layout: "single_post"
 title: "The Marriage of UX and UI: A Symbiotic Relationship 123"
 date: 2024-03-10
-tags: Case study
+tag: "Case study"
 image: "UX-Conversion-Rates-Image.webp"
 promoted: 0
 posted: 1

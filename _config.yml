@@ -29,6 +29,8 @@ url: ""
 twitter_username: jekyllrb
 github_username:  jekyll
 
+is_under_construction: false
+
 # Build settings
 theme: minima
 plugins:
