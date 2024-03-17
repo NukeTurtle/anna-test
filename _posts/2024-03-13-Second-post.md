@@ -1,6 +1,7 @@
 ---
 layout: "single_post"
 title: "The Marriage of UX and UI: A Symbiotic Relationship 123"
+description: "Uncover the symbiotic relationship between UX (User Experience) and UI (User Interface) design and how they work in harmony to create exceptional digital experiences. 123213"
 date: 2024-03-10
 tag: "Case study"
 image: "UX-Conversion-Rates-Image.webp"

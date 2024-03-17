@@ -6,7 +6,7 @@ under_construction: "{{ site.is_under_construction }}"
 
 <section id="post-container" class="block">
     {% for post in site.posts %}
-    <a href="{{post.url}}" style="all: unset;">
+    <a href="{{site.url}}{{post.url}}" style="all: unset;">
         <div class="post{% if post.promoted == 1 %} promoted{% endif %}" data-word-count="{{ post.content | number_of_words  }}">
         <div class="post-content">
             <h2>{{post.title}}</h2>

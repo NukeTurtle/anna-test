@@ -1,6 +1,7 @@
 ---
 layout: "single_post"
 title: "The Art of UX/UI Design: Creating Seamless Digital Experiences"
+description: "Explore the world of UX/UI design and learn how designers craft user-centric digital experiences that delight and engage users."
 date: 2024-03-10
 tag: "Case study"
 image: "UX-Conversion-Rates-Image.webp"
