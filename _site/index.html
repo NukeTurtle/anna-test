@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Anna Kozh - Portfolio</title>
+  <link rel="icon" type="image/png" href="/assets/images/favicon.jpg">
+  <link rel="stylesheet" href="/assets/css/custom.css">
+  <script src="/assets/js/calculate_reading_time.js"></script>
+</head>
+
+<body id="home">
+  
+  <nav class="navbar">
+    <ul class="navbar-nav me-auto">
+      <li class="nav-item">
+        <img class="logo" src="/assets/images/favicon.jpg" alt="" srcset="">
+        <a aria-current="page" href="/">Anna Kozh</a>
+      </li>
+      <li class="nav-item">
+        <a aria-current="page" href="/">Portfolio</a>
+      </li>
+      <li class="nav-item">
+        <a aria-current="page" href="/blog.html">Blog</a>
+      </li>
+      <li class="nav-item icon download"
+        style="background: url(/assets/images/cloud-arrow-down-solid.svg) no-repeat;">
+        <a class="resume-placeholder " href="">
+          R&#233sum&#233</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div><section id="pastExperiences">
+    <div class="experienceBlock">
+        <img class="xpLogo" src="/assets/images/simpology.png" />
+        <h2 class="xpTitle">Product Owner &amp; UI/UX Lead, Simpology</h2>
+        <p class="xpText">
+            In 2022 I joined Simpology .....Lorem ipsum dolor sit amet consectetur. Eget consequat luctus a dui eu morbi eget dui arcu. Id ac justo odio felis eu. Consectetur sit ornare nisl cras. Lobortis massa nibh eget a.
+        </p>
+        <ul class="xpLink">
+            <li><a href="">Case study “Digital income”</a></li>
+            <li><a href="/posts/5">Case study “Digital income”</a></li>
+            <li><a href="/posts/5">Case study “Digital income”</a></li>
+        </ul>
+    </div>
+    <div class="experienceBlock">
+        <img class="xpLogo" src="/assets/images/skoolbag.png" />
+        <h2 class="xpTitle">Product Owner &amp; Design Lead, SkoolBag</h2>
+        <p class="xpText">
+            In 2020 I joined SkoolBag .....Lorem ipsum dolor sit amet consectetur. Eget consequat luctus a dui eu morbi eget dui arcu. Id ac justo odio felis eu. Consectetur sit ornare nisl cras. Lobortis massa nibh eget a.
+        </p>
+        <ul class="xpLink">
+            <li><a href="/posts/5">Case study “Digital income”</a></li>
+            <li><a href="/posts/5">Case study “Digital income”</a></li>
+            <li><a href="/posts/5">Case study “Digital income”</a></li>
+        </ul>
+    </div>
+    <div class="experienceBlock">
+        <img class="xpLogo" src="/assets/images/asg.png" />
+        <h2 class="xpTitle">Senior UX Consultant, ASG Group</h2>
+        <p class="xpText">
+            In 2016 I joined ASG Group .....Lorem ipsum dolor sit amet consectetur. Eget consequat luctus a dui eu morbi eget dui arcu. Id ac justo odio felis eu. Consectetur sit ornare nisl cras. Lobortis massa nibh eget a.
+        </p>
+        <ul class="xpLink"></ul>
+    </div>
+    <div class="experienceBlock">
+        <img class="xpLogo" src="/assets/images/voicebox.png" />
+        <h2 class="xpTitle">UX Designer, VoiceBox Technologies</h2>
+        <p class="xpText">
+            In 2013 I joined VoiceBox Technologies .....Lorem ipsum dolor sit amet consectetur. Eget consequat luctus a dui eu morbi eget dui arcu. Id ac justo odio felis eu. Consectetur sit ornare nisl cras. Lobortis massa nibh eget a.
+        </p>
+        <ul class="xpLink"></ul>
+    </div>
+</section>
+</div>
+  <footer>
+    <h3>Get in touch</h3>
+    <a href="https://www.linkedin.com/in/anna-kozhevnikova/" target="_blank">LinkedIn</a>
+    <a id="emailCopy" onclick="copy()">
+      <span class="tooltiptext" id="tooltip"></span>
+      hi@annakozh.com
+    </a>
+  </footer>
+
+  <script>
+    function copy() {
+      var copyText = document.getElementById("emailCopy").innerText;
+      navigator.clipboard.writeText(copyText);
+
+      var tooltip = document.getElementById("tooltip");
+      tooltip.innerHTML = "Copied";
+      tooltip.style.display = "block";
+      setTimeout(
+        function () {
+          tooltip.style.display = "none";
+        }, 2000)
+    }
+  </script>
+  
+
+</body>
+
+</html>
