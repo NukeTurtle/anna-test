@@ -124,12 +124,12 @@ strong {
   margin: 0 24px;
 }
 
-#singlePost img, .post img {
+/* #singlePost img, .post img {
   object-fit: none;
   margin: 0 auto;
   display: block;
   max-width: 90vw;
-}
+} */
 
 .post .post-stats {
   margin-top: 1rem;
@@ -565,11 +565,11 @@ hr {
   pointer-events: none;
 }
 
-.post-image {
-  /* width: 100%; */
+/* .post-image {
+  width: 100%;
   height: auto;
   object-fit: cover;
-}
+} */
 
 section#post-details {
   display: flex;
@@ -606,8 +606,8 @@ section#post-details {
 }
 
 .xpLogo {
-  height: 26px;
-  width: fit-content;
+  height: fit-content;
+  width: 10rem;
   /* filter: grayscale(0) contrast(1) saturate(0); */
 }
 
@@ -838,7 +838,7 @@ table a {
   flex: 1;
 }
 
-#post-container .post-content p {
+#post-container .post-content span {
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -871,10 +871,10 @@ table a {
   order: 1;
 }
 
-#post-container .post:nth-child(odd) .post-image {
+/* #post-container .post:nth-child(odd) .post-image {
   order: 2;
   margin-left: 20px;
-}
+} */
 
 /* Hide image for even posts if there's no image */
 #post-container .post:nth-child(even):not(:has(.post-image)) .post-image {

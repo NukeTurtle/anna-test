@@ -1,0 +1,26 @@
+<footer>
+    <h3>Get in touch</h3>
+    <a href="https://www.linkedin.com/in/anna-kozhevnikova/" target="_blank">LinkedIn</a>
+    <a id="emailCopy" onclick="copy()">
+      <span class="tooltiptext" id="tooltip"></span>
+      hi@annakozh.com
+    </a>
+  </footer>
+
+  <script>
+    function copy() {
+      var copyText = document.getElementById("emailCopy").innerText;
+      navigator.clipboard.writeText(copyText);
+
+      var tooltip = document.getElementById("tooltip");
+      tooltip.innerHTML = "Copied";
+      tooltip.style.display = "block";
+      setTimeout(
+        function () {
+          tooltip.style.display = "none";
+        }, 2000)
+    }
+  </script>
+
+</body>
+</html>

@@ -1,64 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <title>Anna Kozh - {{page.title}}</title>
-  <link rel="icon" type="image/png" href="{{site.baseurl}}/assets/images/favicon.jpg">
-  <link rel="stylesheet" href="{{site.baseurl}}/assets/css/custom.css">
-  <script src="{{site.baseurl}}/assets/js/calculate_reading_time.js"></script>
-</head>
-
-<body id="home">
-  {% if site.is_under_construction %}
+{% if site.is_under_construction %}
   {% include under-construction.html %}
-  {% else %}
-  <nav class="navbar">
-    <ul class="navbar-nav me-auto">
-      <li class="nav-item">
-        <img class="logo" src="{{site.baseurl}}/assets/images/favicon.jpg" alt="" srcset="">
-        <a aria-current="page" href="/">Anna Kozh</a>
-      </li>
-      <li class="nav-item">
-        <a aria-current="page" href="{{site.baseurl}}/">Portfolio</a>
-      </li>
-      <li class="nav-item">
-        <a aria-current="page" href="{{site.baseurl}}/blog.html">Blog</a>
-      </li>
-      <li class="nav-item icon download"
-        style="background: url({{site.baseurl}}/assets/images/cloud-arrow-down-solid.svg) no-repeat;">
-        <a class="resume-placeholder " href="">
-          R&#233sum&#233</a>
-      </li>
-    </ul>
-  </nav>
+{% else %}
+  {% include header.html %}
 
-  <div>{{ content }}</div>
-  <footer>
-    <h3>Get in touch</h3>
-    <a href="https://www.linkedin.com/in/anna-kozhevnikova/" target="_blank">LinkedIn</a>
-    <a id="emailCopy" onclick="copy()">
-      <span class="tooltiptext" id="tooltip"></span>
-      hi@annakozh.com
-    </a>
-  </footer>
-
-  <script>
-    function copy() {
-      var copyText = document.getElementById("emailCopy").innerText;
-      navigator.clipboard.writeText(copyText);
-
-      var tooltip = document.getElementById("tooltip");
-      tooltip.innerHTML = "Copied";
-      tooltip.style.display = "block";
-      setTimeout(
-        function () {
-          tooltip.style.display = "none";
-        }, 2000)
-    }
-  </script>
-  {% endif %}
-
-</body>
-
-</html>
+  <div id="content">{{ content }}</div>
+  
+  {% include footer.html %}
+{% endif %}

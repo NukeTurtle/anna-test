@@ -6,17 +6,18 @@ under_construction: "{{ site.is_under_construction }}"
 
 <section id="post-container" class="block">
     {% for post in site.posts %}
-    <a href="{{site.url}}{{post.url}}" style="all: unset;">
+    <a href="{{post.url}}" style="all: unset;">
         <div class="post{% if post.promoted == 1 %} promoted{% endif %}" data-word-count="{{ post.content | number_of_words  }}">
         <div class="post-content">
-            <h2>{{post.title}}</h2>
-            <p>{{post.content}}</p>
-            <div class="post-stats">
+          <img class="post-image" src="{{site.baseurl}}/assets/uploads/{{post.image}}">
+          <h2>{{post.title}}</h2>
+          <span>{{post.content}}</span>
+          <div class="post-stats">
             {% assign formattedDate = post.date | date: "%d %b %Y" | upcase %}
             <span>{{formattedDate}}</span>
             <span class="readingTime"></span>
             <span class="{% if post.tags %}post_type{% endif %}">{{post.tag}}</span>
-            </div>
+          </div>
         </div>
         </div>
     </a>
@@ -29,7 +30,6 @@ under_construction: "{{ site.is_under_construction }}"
     postElements.forEach(function(postElement, index) {
       const wordCount = postElement.getAttribute('data-word-count');
       const readingTime = calculateReadingTime(wordCount);
-
       // Find the readingTime span element within the current post
       const readingTimeElement = postElement.querySelector('.readingTime');
       if (readingTimeElement) {
